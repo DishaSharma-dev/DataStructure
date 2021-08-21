@@ -18,7 +18,7 @@ int main(){
 				cout<<k;
 				k++;
 			}
-			else if(j>n && k>i){
+			else if(j>=n && k>i){
 				k--;
 				cout<<k;
 			}
