@@ -14,7 +14,7 @@ int main(){
 	for(i=1;i<=n;i++){
 		k=i;
 		for(j=1;j<2*n;j++){
-			if((i+j)>n && j<=n){
+			if((j+j)>n && j<=n){
 				cout<<k;
 				k++;
 			}
