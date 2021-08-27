@@ -17,7 +17,7 @@ int main(){
 	int i,j;
 	for(i=1;i<2*n;i++){
 		for(j=1;j<2*n;j++){
-			if(i<=n && j<=n){
+			if(i<n && j<=n){
 				cout<<n;
 			}
 			else{
