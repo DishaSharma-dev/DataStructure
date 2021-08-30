@@ -14,15 +14,26 @@ int main(){
 	int n;
 	cout<<"Enter the number of rows to be display: ";
 	cin>>n;
+	int size = 2*n-1;
+	int initial=0;
+	int final=size-1;
+	int arr [size][size];
 	int i,j;
-	for(i=1;i<2*n;i++){
-		for(j=1;j<2*n;j++){
-			if(i<n && j<=n){
-				cout<<n;
+	while(n != 0){
+		for(i=initial;i<=final;i++){
+			for(j=initial; j<=final;j++){
+				if(i== initial || j== initial || i==final || j==final)
+					arr[i][j] = n;
 			}
-			else{
-				cout<<"*";
-			}
+		}
+		++initial;
+		--final;
+		--n;
+	}
+	//Print the array
+	for(i=0;i<size;i++){
+		for(j=0;j<size;j++){
+			cout<<arr[i][j]<<" ";
 		}
 		cout<<endl;
 	}
