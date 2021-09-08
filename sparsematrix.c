@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(){
-	int i, j, n, flag=0;
+	int i, j, n, count=0;
 	printf("Enter the size of matrix: ");
 	scanf("%d",&n);
 	int arr[n][n];
@@ -22,10 +22,10 @@ int main(){
 	}
 	for(i=0;i<n;i++){
 		for(j=0;j<n;j++){
-			
+			if(arr[i][j] == 0) ++count;	
 		}	
 	}
-	if(flag == 0) printf("Given matrix is an identity matrix.");
-	else printf("Given matrix is not an identity matrix.");
+	if(count > (n*n)/2) printf("Given matrix is a sparse matrix.");
+	else printf("Given matrix is not a sparse matrix.");
 	return 0;	
 }
