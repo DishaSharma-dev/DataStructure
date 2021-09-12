@@ -1,4 +1,5 @@
 //Sepearte mid from array and recover original array
+//3 2 4 1 5 => 1 2 3 4 5
 
 #include <iostream>
 using namespace std;
