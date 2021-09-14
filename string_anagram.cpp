@@ -36,3 +36,43 @@ int main ()
     anagram(str1, str2);
     return 0;
 }
+
+//Second approach
+/*
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main(){
+	char alpha[256] = {0};
+	char str1[50];
+	char str2[50];
+	int flag = 0;
+	cout<<"Enter the String1: ";
+	cin>>str1;
+	cout<<"Enter the String2: ";
+	cin>>str2;
+	if(strlen(str1) != strlen(str2)){
+		cout<<"false";
+	}
+	else{
+		for(int i=0;str1[i]!='\0';i++){
+			int index = str1[i];
+			alpha[index]++;
+		}
+		for(int i=0;str2[i]!='\0';i++){
+			int index = str2[i];
+			alpha[index]--;
+		}
+		for(int i=0;i<256;i++){
+			if(alpha[i]!=0){
+				flag = 1;
+				break;
+			}
+		}
+	}
+	if(flag == 1) cout<<"false";
+	else cout<<"true";
+	return 0;
+}
+*/
