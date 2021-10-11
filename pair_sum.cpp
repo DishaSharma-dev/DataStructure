@@ -18,9 +18,9 @@ int main(){
 	}
 	for(i=0;i<n;i++){
 		if(map.count(-arr[i]) > 0){
-			pair++;
-			map[arr[i]]--;
-			map[-arr[i]]--;
+			pair= pair + map[arr[i]]*map[-arr[i]];
+			map[arr[i]] = 0;
+			map[-arr[i]] = 0;
 		}	
 	}
 	cout<<pair;
