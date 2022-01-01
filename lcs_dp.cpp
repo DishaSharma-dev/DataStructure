@@ -28,6 +28,10 @@ int lcs(char* s1, char* s2){
 		}
 	}
 	int ans = dp[m][n];
+    for(int i = 0; i <= m; i++){
+		delete []dp[i];
+	}
+	delete []dp;
 	return ans;
 }
 
